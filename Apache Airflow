@@ -1,8 +1,18 @@
 What is Airflow? 
+Airflow is open source framework that is used for orchestration purpose.
+Orchestration is process that automate workflow. 
 What Airflow is not?
+It is not an ETL Framework, It is not real time data processing system. 
 Airflow VS Python Script
+Airflow is a workflow that is directed, acyclic and graph and sometimes it involves execution of parallel task during workflow. 
+Python script will also create workflow but it executes task one by one. Parallel task execution not possible in python script. 
 Verdent AI Code Editor
+It is an AI chatbot to perform Airflow task and Data Engineer task. 
 Airflow Core Components
+Metadata DB: Information about data such as DAG execution details, task details etc. All historical and logs are stored. 
+DAG Processor: It will scan,parse and read entire dags in dag folder and store all information into Metadata DB. 
+API Server: It is a middleman to perform communication between all components in Airflow architecture. 
+
 Airflow Architecture
 What is DAG, Task, Operators
 XCOMs in Airflow

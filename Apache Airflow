@@ -1,19 +1,40 @@
 What is Airflow? 
 Airflow is open source framework that is used for orchestration purpose.
 Orchestration is process that automate workflow. 
+
 What Airflow is not?
 It is not an ETL Framework, It is not real time data processing system. 
+
 Airflow VS Python Script
 Airflow is a workflow that is directed, acyclic and graph and sometimes it involves execution of parallel task during workflow. 
 Python script will also create workflow but it executes task one by one. Parallel task execution not possible in python script. 
+
 Verdent AI Code Editor
 It is an AI chatbot to perform Airflow task and Data Engineer task. 
+
 Airflow Core Components
 Metadata DB: Information about data such as DAG execution details, task details etc. All historical and logs are stored. 
 DAG Processor: It will scan,parse and read entire dags in dag folder and store all information into Metadata DB. 
 API Server: It is a middleman to perform communication between all components in Airflow architecture. 
+Schedular: Schedule duration of execution of entire DAG. 
+Executor: It will generate worker to execute task. 
+Worker: Worker are real executors that executes task
+Queue: It priotize execution of task
+Triggerer: When any complex task takes time to execute worker will give this task to triggerer and it will take next task based on priority and when that complex task completely executed then triggerer will notify to worker
 
 Airflow Architecture
+When Developer create DAG
+DAG processor parsed entire DAG inside DAG folder 
+store all information by converting it into serialized JSON format DAG in Metadata DB
+API server help to communicate between each component in this architecture
+Schedular reads entire DAG information from Metadata DB and create pre-queue for all task
+and provide this queue to executor
+Executor will priotize each task in main queue and tells worker to execute each task based on priority
+when any task delayed in execution because of complex logic or any reason worker will handover that task to
+triggerer and it will move to next task execution based on priority. 
+when that task will completely execute then triggerer will notify to worker then worker
+will store that task to MetadataDB again schedular read data from it and perform same process. 
+
 What is DAG, Task, Operators
 XCOMs in Airflow
 Parallel Tasks 

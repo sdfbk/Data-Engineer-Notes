@@ -1,0 +1,17 @@
+What is Airflow? 
+What Airflow is not?
+Airflow VS Python Script
+Verdent AI Code Editor
+Airflow Core Components
+Airflow Architecture
+What is DAG, Task, Operators
+XCOMs in Airflow
+Parallel Tasks 
+Conditional Branches
+Scheduling Presetsts in Airflow
+Cron Syntax in Airflow
+Delta trigger in Airflow
+Incremental Load & Initial Load
+Special Schedules with Events
+Assets in Airflow
+Inherited DAG Orchestrationow

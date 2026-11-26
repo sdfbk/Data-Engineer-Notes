@@ -36,10 +36,24 @@ when that task will completely execute then triggerer will notify to worker then
 will store that task to MetadataDB again schedular read data from it and perform same process. 
 
 What is DAG, Task, Operators
+DAG: Directed Acyclic Graph it is a workflow contain one or multiple task which are directed in forward direction only and never revert back with nodes and edges just like graph presentation. 
+Task: An isolated environment where execution of only one step with an entire workflow. 
+Operators: Inside DAG it is a category of each task means task can be python, pyspark, bash etc. 
+
 XCOMs in Airflow
+In DAG, o/p of one task is an I/p of another task. Which creates dependency of one task on another task. 
+
 Parallel Tasks 
+Simultaneously execution of multiple task at same time. 
+
 Conditional Branches
-Scheduling Presetsts in Airflow
+It is a conditional statement based on specific condition any one of the task executes. 
+
+Scheduling:
+It schedule duration or set time to executes DAG
+Types of Scheduling:
+Trigger based schedule:
+Preset: 
 Cron Syntax in Airflow
 Delta trigger in Airflow
 Incremental Load & Initial Load

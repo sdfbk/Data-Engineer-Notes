@@ -53,10 +53,19 @@ Scheduling:
 It schedule duration or set time to executes DAG
 Types of Scheduling:
 Trigger based schedule:
-Preset: 
-Cron Syntax in Airflow
-Delta trigger in Airflow
+Preset: It has build in keywords @daily, @hours, @month that execute dag automatically at 12am daily by keeping @daily
+Cron: It has one syntax min:hrs:week days:month based on this it will execute schedule
+Delta:If we want to execute schedule at 3 days everytime 
+
 Incremental Load & Initial Load
+Initial load: When whole data load from SQL database to data warehouse. 
+Incremental load: When data updated based on date it will incrementally load data in data warehouse. 
+
 Special Schedules with Events
+When want to execute schedule on special days such as on company's events. 
+
 Assets in Airflow
-Inherited DAG Orchestrationow
+Asset means useful information or it contains DAG such a DAG that depends on end result directly without relying on workflow means it may contains only one task to execute. 
+
+Inherited DAG Orchestration
+Automates workflow of multiple DAGs. 

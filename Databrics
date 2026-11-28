@@ -1,6 +1,13 @@
 Apache Spark
+Apache spark is big data processing system
+Where huge data cannot processed on single system for that system is distributed into multiple sub system called as distributed system
+
 What is Databricks 
+Databricks is managed solution for apache spark. 
+
 Databricks Unity Catalog
+It is present inside Unity Metadata log it is just like database in SQL. Unity Catlog contain schema inside it tables, volume, model, views 
+
 Databricks Volumes
 Databricks Serverless Architecture
 Delta Tables

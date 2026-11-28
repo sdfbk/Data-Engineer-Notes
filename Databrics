@@ -25,11 +25,29 @@ It has control and compute pane but this architecture automatically perform scal
 It is used when data is less but this architecture is costly as compared to previous one. 
 
 Delta Tables
+It is default format tables which arr are created inside unity catalog -- scheme -- tables. It's type default type is parquet file. 
+
 Lakeflow Connect
+It is data ingestion technique which contains managed connector to ingest data from SAAS, Database and files. 
+Earlier when Databrics has spark API to ingest data from different sources. 
+
 Databricks Autoloader
+It is an data ingestion tool that incrementally load streaming data. 
+Because many stakeholders requires to display data immediately Eg., When data comes at 7:00 it should be display on 7:00
+
 Spark Structured Streaming
+It is also data ingestion technique in Apache spark. 
+Where Databrics Autoloader read data from source and spark Structured streaming use pyspark or sql spark code to transform data into tables. 
+
 DBUTILS
+It is a Databrics utilities and it's just like libraries in python that helps to perform task within less code. 
+
 Medallion Architecture With PySpark
+Entire Data pipeline is divided into 3 layers Bronze, Silver and Gold layer. 
+Bronze layer: Ingest data from source
+Silver layer: It transform data which are ingested from bronze layer
+Gold layer: Final data placed in dimensional modelling for dashboard preparation. 
+
 Lakeflow Jobs
 Lakeflow Declarative Pipelines
 Databricks Asset Bundles

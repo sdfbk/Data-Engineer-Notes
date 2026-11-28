@@ -12,12 +12,21 @@ Databricks Volumes
 Volume which are inside unity catalog that governs data directly from non tabular data (Managed volumes) such as files like JSON, CSV, Parquet etc
 It also govern data from cloud storage object (External Volume) like AWS, Azure etc. 
 
-Databricks Serverless Architecture
+Databricks Architecture
+It contains Control Pane and Compute Pane
+Control Pane: Main UI of databricks which contains user profile, workspace, catalog etc 
+Compute Pane: Data processing all operation regarding data which are inside it
+2 types of Architecture:
+Classic Architecture:
+It has control and compute pane but all work is manually done by compute pane like resource selection to processed data
+This architecture used when data is huge, and our budget is less. 
+Serverless Architecture:
+It has control and compute pane but this architecture automatically perform scaling up and down resources as requires for data processing. 
+It is used when data is less but this architecture is costly as compared to previous one. 
 
 Delta Tables
 Lakeflow Connect
 Databricks Autoloader
-Ingest Data From AWS S3
 Spark Structured Streaming
 DBUTILS
 Medallion Architecture With PySpark

@@ -9,9 +9,11 @@ Databricks Unity Catalog
 It is present inside Unity Metastore. it is just like database in SQL. Unity Catlog contain schema inside it tables, volume, model, views 
 
 Databricks Volumes
-Volume that governs data directly from file which can externally through data warehouse such as AWS, Azure and Internally such as uploading JSON file, Parquet file etc. 
+Volume which are inside unity catalog that governs data directly from non tabular data (Managed volumes) such as files like JSON, CSV, Parquet etc
+It also govern data from cloud storage object (External Volume) like AWS, Azure etc. 
 
 Databricks Serverless Architecture
+
 Delta Tables
 Lakeflow Connect
 Databricks Autoloader
